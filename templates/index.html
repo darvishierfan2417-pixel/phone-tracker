@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Tracker</title>
+    <meta http-equiv="refresh" content="30">
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        .box { background: #f0f0f0; padding: 20px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>📱 آخرین اطلاعات گوشی</h2>
+        {% if data.ip %}
+            <p>🌐 IP: <strong>{{ data.ip }}</strong></p>
+            <p>🕐 زمان: <strong>{{ data.time }}</strong></p>
+        {% else %}
+            <p>هنوز اطلاعاتی دریافت نشده...</p>
+        {% endif %}
+    </div>
+</body>
+</html>
