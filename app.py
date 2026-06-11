@@ -3,10 +3,7 @@ from datetime import datetime
 
 app = Flask(name)
 
-last_data = {
-    "ip": None,
-    "time": None
-}
+last_data = {"ip": None, "time": None}
 
 @app.route('/ping', methods=['POST'])
 def ping():
